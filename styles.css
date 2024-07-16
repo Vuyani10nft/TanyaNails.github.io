@@ -77,7 +77,7 @@ body {
 }
 
 .service-item:nth-child(2):hover {
-    background-color: purple; /* Purple hover color for Pedicure */
+    background-color: rgb(186, 91, 186); /* Purple hover color for Pedicure */
 }
 
 .service-item:nth-child(3):hover {
