@@ -13,12 +13,14 @@ body {
 }
 
 .hero {
-    background: glossy pink; /* Set your desired glossy pink color here */
+    background: url('https://images.pexels.com/photos/3997346/pexels-photo-3997346.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
     color: white;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 50px;
 }
 
 .hero-content {
