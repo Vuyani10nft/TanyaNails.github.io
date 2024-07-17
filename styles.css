@@ -144,7 +144,7 @@ body {
 }
 
 .social-media-large a:hover {
-    color: blue;
+    color: #FF69B4;
 }
 
 .footer {
@@ -226,5 +226,5 @@ body {
 }
 
 .modal .social-media a:hover {
-    color: blue;
+    color: #FF1493;
 }
