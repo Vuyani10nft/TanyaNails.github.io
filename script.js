@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', (event) => {
     const modal = document.getElementById("contactModal");
     const btn = document.getElementById("contactBtn");
