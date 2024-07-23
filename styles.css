@@ -86,21 +86,63 @@ body {
     background-color: #FF69B4; /* Mixed pink and red hover color for Nail Art */
 }
 
+#services {
+    padding: 20px;
+    background-color: #f9f9f9; /* Adjust background color as needed */
+}
+
+.service {
+    margin-bottom: 40px;
+}
+
+.service h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+}
+
 .service-images {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    gap: 10px;
 }
 
-.service-image {
-    margin: 20px 0;
+.service-images img {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 50%; /* Makes the images oval */
+    cursor: pointer;
+    margin: 5px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.service-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.service-images img:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+/* Hover effects for prices */
+.service:nth-child(1) .service-content:hover .service-price {
+    background-color: peachpuff; /* Peach color for the first service */
+}
+
+.service:nth-child(2) .service-content:hover .service-price {
+    background-color: #d8bfd8; /* Purple color for the second service */
+}
+
+.service:nth-child(3) .service-content:hover .service-price {
+    background-color: lightpink; /* Pink color for the third service */
+}
+
+.service-price {
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
 }
 
 .pricing {
@@ -144,7 +186,7 @@ body {
 }
 
 .social-media-large a:hover {
-    color: #FF69B4;
+    color: blue;
 }
 
 .footer {
@@ -175,6 +217,7 @@ body {
 .social-media a:hover {
     color: blue;
 }
+
 #our-location {
     padding: 20px;
     background-color: #f9f9f9; /* Adjust the background color as needed */
@@ -209,16 +252,21 @@ body {
 
 .modal-content {
     background-color: white;
-    margin: 15% auto;
-    padding: 20px;
+    margin: 10% auto; /* Adjusted margin for better centering */
+    padding: 10px; /* Reduced padding */
     border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    box-shadow: 0 5px 15;
-      rgba(0, 0, 0, 0.3);
+    width: 50%; /* Adjusted width */
+    max-width: 600px; /* Adjusted max-width */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     text-align: center;
 }
+
+.modal-content img {
+    width: 100%; /* Image width fills modal content */
+    height: auto; /* Maintain aspect ratio */
+}
+
 
 .close {
     color: #aaa;
@@ -242,5 +290,19 @@ body {
 }
 
 .modal .social-media a:hover {
-    color: #FF1493;
+    color: blue;
 }
+
+/* Hover effects for service sections */
+.service:nth-child(1) .service-content:hover {
+    background-color: peachpuff; /* Peach color for the first service */
+}
+
+.service:nth-child(2) .service-content:hover {
+    background-color: #d8bfd8; /* Light purple color for the second service */
+}
+
+.service:nth-child(3) .service-content:hover {
+    background-color: lightpink; /* Light pink color for the third service */
+}
+
