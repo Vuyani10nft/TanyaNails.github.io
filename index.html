@@ -11,11 +11,6 @@
     <title>Lady Tanya Nail Technician Services</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-
 </head>
 <body>
     <!-- Header Section -->
@@ -46,11 +41,54 @@
             </div>
         </div>
         <!-- Added Sections for Service Images -->
-        <div class="service-images">
-            <div class="service-image"><img src="path/to/your/image1.jpg" alt="Manicure"></div>
-            <div class="service-image"><img src="path/to/your/image2.jpg" alt="Pedicure"></div>
-            <div class="service-image"><img src="path/to/your/image3.jpg" alt="Nail Art"></div>
+         <section id="services">
+        <div class="service">
+            <h3>Manicure</h3>
+            <div class="service-content">
+                <div class="service-images">
+                    <img src="https://images.pexels.com/photos/3997392/pexels-photo-3997392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Manicure Image 1" class="thumbnail" onclick="openModal(this.src)">
+                    <img src="https://images.pexels.com/photos/3997392/pexels-photo-3997392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Manicure Image 2" class="thumbnail" onclick="openModal(this.src)">
+                    <img src="https://images.pexels.com/photos/3997392/pexels-photo-3997392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Manicure Image 3" class="thumbnail" onclick="openModal(this.src)">
+                    <img src="https://images.pexels.com/photos/3997392/pexels-photo-3997392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Manicure Image 4" class="thumbnail" onclick="openModal(this.src)">
+                </div>
+                <div class="service-price">200</div>
+            </div>
         </div>
+        <div class="service">
+            <h3>Pedicure</h3>
+            <div class="service-content">
+                <div class="service-images">
+                    <img src="https://images.pexels.com/photos/3997392/pexels-photo-3997392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Pedicure Image 1" class="thumbnail" onclick="openModal(this.src)">
+                    <img src="https://images.pexels.com/photos/3997392/pexels-photo-3997392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Pedicure Image 2" class="thumbnail" onclick="openModal(this.src)">
+                    <img src="https://images.pexels.com/photos/3997392/pexels-photo-3997392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Pedicure Image 3" class="thumbnail" onclick="openModal(this.src)">
+                    <img src="https://images.pexels.com/photos/3997392/pexels-photo-3997392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Pedicure Image 4" class="thumbnail" onclick="openModal(this.src)">
+                </div>
+                <div class="service-price">150</div>
+            </div>
+        </div>
+        <div class="service">
+            <h3>Nail Art</h3>
+            <div class="service-content">
+                <div class="service-images">
+                    <img src="https://images.pexels.com/photos/3997392/pexels-photo-3997392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Nail Art Image 1" class="thumbnail" onclick="openModal(this.src)">
+                    <img src="https://images.pexels.com/photos/3997392/pexels-photo-3997392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Nail Art Image 2" class="thumbnail" onclick="openModal(this.src)">
+                    <img src="https://images.pexels.com/photos/3997392/pexels-photo-3997392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Nail Art Image 3" class="thumbnail" onclick="openModal(this.src)">
+                    <img src="https://images.pexels.com/photos/3997392/pexels-photo-3997392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Nail Art Image 4" class="thumbnail" onclick="openModal(this.src)">
+                </div>
+                <div class="service-price">300</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+
     </section>
 
     <!-- Pricing Section -->
@@ -93,7 +131,7 @@
             <a href="https://t.me/your-username" target="_blank"><i class="fab fa-telegram-plane"></i></a>
         </div>
     </section>
-     <!-- New "Our Location" Section -->
+   <!-- New "Our Location" Section -->
 <section id="our-location" class="our-location">
     <h2>Our Location</h2>
     <p>39 St Georges, Southernwood, East London, South Africa</p>
@@ -107,6 +145,7 @@
         referrerpolicy="no-referrer-when-downgrade">
     </iframe>
 </section>
+
     <!-- Footer Section -->
     <footer class="footer" aria-label="Footer">
         <p>&copy; 2024 Lady Tanya's Nail Studio. All rights reserved.</p>
@@ -128,6 +167,8 @@
             </div>
         </div>
     </div>
+ 
+
 
     <script src="script.js"></script>
 </body>
