@@ -86,11 +86,7 @@ body {
     background-color: #FF69B4; /* Mixed pink and red hover color for Nail Art */
 }
 
-#services {
-    padding: 20px;
-    background-color: #f9f9f9; /* Adjust background color as needed */
-}
-
+/* Service Section */
 .service {
     margin-bottom: 40px;
 }
@@ -103,13 +99,21 @@ body {
 .service-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align items to the left */
+    padding: 10px;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
+}
+
+.service-images-container {
+    display: flex;
+    gap: 5px; /* Adjusted gap */
+    margin-right: 10px; /* Reduced margin-right */
 }
 
 .service-images {
     display: flex;
-    gap: 10px;
+    gap: 5px; /* Adjusted gap */
 }
 
 .service-images img {
@@ -118,7 +122,6 @@ body {
     object-fit: cover;
     border-radius: 50%; /* Makes the images oval */
     cursor: pointer;
-    margin: 5px;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -127,22 +130,42 @@ body {
     transform: scale(1.05);
 }
 
+.service-price {
+    font-size: 1.5em; /* Increased font size */
+    padding: 5px; /* Reduced padding */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Adjusting hover effect box */
+.service-content:hover {
+    padding: 8px; /* Reduced padding */
+}
+
+/* Hover effects for service content */
+.service:nth-child(1) .service-content:hover {
+    background-color: peachpuff; /* Peach color for the first service */
+}
+
+.service:nth-child(2) .service-content:hover {
+    background-color: #d8bfd8; /* Light purple color for the second service */
+}
+
+.service:nth-child(3) .service-content:hover {
+    background-color: lightpink; /* Light pink color for the third service */
+}
+
 /* Hover effects for prices */
 .service:nth-child(1) .service-content:hover .service-price {
     background-color: peachpuff; /* Peach color for the first service */
 }
 
 .service:nth-child(2) .service-content:hover .service-price {
-    background-color: #d8bfd8; /* Purple color for the second service */
+    background-color: #d8bfd8; /* Light purple color for the second service */
 }
 
 .service:nth-child(3) .service-content:hover .service-price {
-    background-color: lightpink; /* Pink color for the third service */
-}
-
-.service-price {
-    font-size: 1.2em;
-    transition: background-color 0.3s ease;
+    background-color: lightpink; /* Light pink color for the third service */
 }
 
 .pricing {
@@ -305,4 +328,3 @@ body {
 .service:nth-child(3) .service-content:hover {
     background-color: lightpink; /* Light pink color for the third service */
 }
-
