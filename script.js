@@ -1,25 +1,22 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    const modal = document.getElementById("contactModal");
-    const btn = document.getElementById("contactBtn");
-    const span = document.getElementsByClassName("close")[0];
+    const contactModal = document.getElementById("contactModal");
+    const contactBtn = document.getElementById("contactBtn");
+    const contactClose = contactModal.querySelector(".close");
 
-    btn.onclick = function() {
-        modal.style.display = "flex";
+    contactBtn.onclick = function() {
+        contactModal.style.display = "flex";
     }
 
-    span.onclick = function() {
-        modal.style.display = "none";
+    contactClose.onclick = function() {
+        contactModal.style.display = "none";
     }
 
     window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+        if (event.target == contactModal) {
+            contactModal.style.display = "none";
         }
     }
 });
-// script.js
-
-// script.js
 
 function openModal(imageSrc) {
     var modal = document.getElementById("myModal");
@@ -40,3 +37,7 @@ function closeModal() {
     modal.style.display = "none";
 }
 
+function closeContactModal() {
+    var contactModal = document.getElementById("contactModal");
+    contactModal.style.display = "none";
+}
