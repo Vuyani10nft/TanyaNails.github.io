@@ -135,7 +135,7 @@
 <section id="our-location" class="our-location">
     <h2>Our Location</h2>
     <p>39 St Georges, Southernwood, East London, South Africa</p>
-  <p>Enter into the place written Hlonies Hair Salon and Nail Bar on a small black billboard</p>
+  <p>Enter into the place written <strong>HLONIE'S HAIR SALON & NAIL BAR</strong> on a small black billboard</p>
     <iframe 
         src="https://www.google.com/maps/embed?pb=!4v1690203570123!6m8!1m7!1sQkKCXyQimV18IECUrqKXcQ!2m2!1d-33.0032101!2d27.901264!3f148.73!4f15.76!5f0.7820865974627469" 
         class="full-width-iframe"
@@ -151,25 +151,30 @@
         <p>&copy; 2024 Lady Tanya's Nail Studio. All rights reserved.</p>
     </footer>
 
-    <!-- Contact Us Modal -->
-    <div id="contactModal" class="modal" aria-label="Contact Us Modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Contact Us</h2>
-            <p>Email: <a href="mailto:chitizalinnet@gmail.com">chitizalinnet@gmail.com</a></p>
-            <p>Phone: +27 744 764 143</p>
-            <div class="social-media">
-                <a href="https://www.facebook.com/profile.php?id=100092600753423&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i></a>
+   <!-- Contact Us Modal -->
+<div id="contactModal" class="modal" aria-label="Contact Us Modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeContactModal()">&times;</span>
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:chitizalinnet@gmail.com">chitizalinnet@gmail.com</a></p>
+        <p>Phone: +27 744 764 143</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/profile.php?id=100092600753423&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/invites/contact/?igsh=4rky65k6roc3&utm_content=re8e1qb" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.linkedin.com/in/linnet-chitiza-206654276?trk=contact-info" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://wa.me/27744764143" target="_blank"><i class="fab fa-whatsapp"></i></a>
             <a href="https://t.me/@Ladytanyanails" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-            </div>
         </div>
     </div>
- 
+</div>
 
-
+<!-- The Modal for images -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+</div>
+    
     <script src="script.js"></script>
 </body>
 </html>
