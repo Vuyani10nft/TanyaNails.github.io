@@ -99,7 +99,6 @@ body {
 .service-content {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align items to the left */
     padding: 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -108,7 +107,6 @@ body {
 .service-images-container {
     display: flex;
     gap: 5px; /* Adjusted gap */
-    margin-right: 10px; /* Reduced margin-right */
 }
 
 .service-images {
@@ -130,16 +128,8 @@ body {
     transform: scale(1.05);
 }
 
-.service-price {
-    font-size: 1.5em; /* Increased font size */
-    padding: 5px; /* Reduced padding */
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-/* Adjusting hover effect box */
-.service-content:hover {
-    padding: 8px; /* Reduced padding */
+.service-price-container {
+    margin-left: 20px; /* Space between images and price */
 }
 
 /* Hover effects for service content */
@@ -166,6 +156,13 @@ body {
 
 .service:nth-child(3) .service-content:hover .service-price {
     background-color: lightpink; /* Light pink color for the third service */
+}
+
+.service-price {
+    font-size: 1.5em; /* Increased font size */
+    padding: 5px; /* Reduced padding */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .pricing {
@@ -276,7 +273,7 @@ body {
 .modal-content {
     background-color: white;
     margin: 10% auto; /* Adjusted margin for better centering */
-    padding: 10px; /* Reduced padding */
+    padding: 20px; /* Increased padding for better content spacing */
     border: 1px solid #888;
     width: 50%; /* Adjusted width */
     max-width: 600px; /* Adjusted max-width */
@@ -290,7 +287,6 @@ body {
     height: auto; /* Maintain aspect ratio */
 }
 
-
 .close {
     color: #aaa;
     float: right;
@@ -299,7 +295,7 @@ body {
 }
 
 .close:hover, .close:focus {
-    color: black;
+    color: red; /* Red hover color for the close button */
     text-decoration: none;
     cursor: pointer;
 }
@@ -316,15 +312,44 @@ body {
     color: blue;
 }
 
-/* Hover effects for service sections */
-.service:nth-child(1) .service-content:hover {
-    background-color: peachpuff; /* Peach color for the first service */
-}
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
 
-.service:nth-child(2) .service-content:hover {
-    background-color: #d8bfd8; /* Light purple color for the second service */
-}
+    .hero-content p {
+        font-size: 1.2em;
+    }
 
-.service:nth-child(3) .service-content:hover {
-    background-color: lightpink; /* Light pink color for the third service */
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+    }
+
+    .service-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-images {
+        justify-content: center;
+    }
+
+    .service-images img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .service-price-container {
+        margin: 20px 0 0 0; /* Adjust margin for better spacing */
+    }
+
+    .modal-content {
+        width: 80%;
+    }
 }
