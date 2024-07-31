@@ -6,6 +6,45 @@ body {
     box-sizing: border-box;
     font-size: 1.3em;
 }
+/* Navigation Header Styles */
+.navigation-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    z-index: 1000; /* Ensure it stays on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navigation-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-header nav ul li {
+    margin: 0 15px;
+}
+
+.navigation-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.navigation-header nav ul li a:hover {
+    color: #e91e63; /* Color for hover effect */
+}
+
+/* Adjust the top margin for content to avoid overlap */
+body {
+    margin-top: 48px; /* Adjust this value based on the header height */
+}
 
 .header, .services, .pricing, .booking, .footer {
     text-align: center;
