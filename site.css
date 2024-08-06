@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #333;
     background-color: #f5f5f5;
+    line-height: 1.6;
 }
+
 /* Rolling Header Styles */
 .navigation-header {
     position: fixed;
@@ -52,7 +56,6 @@ header {
 header h1 {
     margin: 0;
     font-size: 2.5em;
-    font-family: 'Arial', sans-serif;
     animation: drop 1s ease-out;
 }
 
@@ -60,29 +63,30 @@ header h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 .intro-image {
-    width: 80%;
-    max-width: 800px;
-    height: auto;
+    width: 50%; /* Adjust this percentage as needed */
+    max-width: 400px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .content {
-    background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .content h2, .content h3 {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 2em;
     margin-top: 0;
     animation: drop 1s ease-out;
@@ -90,7 +94,6 @@ header h1 {
 
 .content p, .content ul {
     font-size: 1.2em;
-    line-height: 1.6;
 }
 
 .content ul {
