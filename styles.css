@@ -181,6 +181,7 @@ body {
 }
 
 /* Pricing Section */
+
 .pricing {
     background-color: #87CEEB;
     padding: 50px 20px;
@@ -201,6 +202,19 @@ body {
     background-color: #e91e63;
     color: white;
 }
+/* Pricing Section Image Styles */
+.pricing-image {
+    text-align: center; /* Center the image */
+    padding: 20px; /* Add padding around the image */
+}
+
+.price-list-img {
+    max-width: 80%; /* Adjust the maximum width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: add some rounding to the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add some shadow for depth */
+}
+
 
 /* Booking Section */
 .booking {
