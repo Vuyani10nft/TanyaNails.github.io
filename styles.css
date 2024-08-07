@@ -88,6 +88,14 @@ body {
     display: inline-block;
     cursor: pointer;
 }
+/* Other CSS styles */
+
+/* Centering text for the Manicure Section */
+#manicure h1 {
+    text-align: center; /* Center text horizontally */
+    margin: 0; /* Optional: remove default margins if necessary */
+    padding: 10px; /* Optional: add padding for spacing */
+}
 
 /* Services Section */
 .services {
