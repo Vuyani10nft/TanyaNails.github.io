@@ -53,15 +53,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
 function openModal(imageSrc) {
     var modal = document.getElementById("myModal");
     var modalImage = document.getElementById("modalImage");
-    modal.style.display = "block";
-    modalImage.src = imageSrc;
+    
+    // Ensure no duplicate images are added
+    if (modalImage.src !== imageSrc) {
+        modal.style.display = "block";
+        modalImage.src = imageSrc;
 
-    // Add event listener to close modal when clicking outside the image
-    modal.addEventListener('click', function(event) {
-        if (event.target === modal) {
-            closeModal();
-        }
-    });
+        // Add event listener to close modal when clicking outside the image
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    }
 }
 
 function closeModal() {
