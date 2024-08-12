@@ -1,29 +1,77 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Existing contact modal functionality
-    const contactModal = document.getElementById("contactModal");
-    const contactBtn = document.getElementById("contactBtn");
-    const contactClose = contactModal.querySelector(".close");
+document.addEventListener('DOMContentLoaded', () => {
+    // Modal Functionality
+    window.openModal = function(imageSrc) {
+        const modal = document.getElementById("myModal");
+        const modalImage = document.getElementById("modalImage");
 
-    contactBtn.onclick = function() {
-        contactModal.style.display = "flex";
-    }
-
-    contactClose.onclick = function() {
-        contactModal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-        if (event.target == contactModal) {
-            contactModal.style.display = "none";
+        if (modal && modalImage) {
+            modalImage.src = imageSrc;
+            modal.style.display = "block";
+        } else {
+            console.error("Modal or modalImage not found");
         }
     }
 
-    // Lazy load Google Maps
+    window.closeModal = function() {
+        const modal = document.getElementById("myModal");
+        if (modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Close the modal when clicking outside of the image
+    const modal = document.getElementById("myModal");
+    if (modal) {
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    }
+
+    // Attach event listeners to images
+    const imageElements = document.querySelectorAll('.thumbnail');
+    imageElements.forEach(image => {
+        image.addEventListener('click', () => {
+            openModal(image.src);
+        });
+    });
+
+    // Contact Modal Functionality
+    const contactModal = document.getElementById("contactModal");
+    const contactBtn = document.getElementById("contactBtn");
+    const contactClose = contactModal?.querySelector(".close");
+
+    if (contactBtn) {
+        contactBtn.addEventListener('click', () => {
+            if (contactModal) {
+                contactModal.style.display = "flex";
+            }
+        });
+    }
+
+    if (contactClose) {
+        contactClose.addEventListener('click', () => {
+            if (contactModal) {
+                contactModal.style.display = "none";
+            }
+        });
+    }
+
+    window.addEventListener('click', (event) => {
+        if (event.target === contactModal) {
+            if (contactModal) {
+                contactModal.style.display = "none";
+            }
+        }
+    });
+
+    // Lazy Load Google Maps
     const mapContainer = document.getElementById('map-container');
     let mapLoaded = false;
 
     function loadMap() {
-        if (!mapLoaded) {
+        if (!mapLoaded && mapContainer) {
             const mapIframe = document.createElement('iframe');
             mapIframe.src = "https://www.google.com/maps/embed?pb=!4v1690203570123!6m8!1m7!1sQkKCXyQimV18IECUrqKXcQ!2m2!1d-33.0032101!2d27.901264!3f148.73!4f15.76!5f0.7820865974627469";
             mapIframe.style.width = '100%';
@@ -38,42 +86,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     function onScroll() {
-        const rect = mapContainer.getBoundingClientRect();
-        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-            loadMap();
-            window.removeEventListener('scroll', onScroll);
+        if (mapContainer) {
+            const rect = mapContainer.getBoundingClientRect();
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                loadMap();
+                window.removeEventListener('scroll', onScroll);
+            }
         }
     }
 
     window.addEventListener('scroll', onScroll);
     onScroll(); // Check on load in case already in view
 });
-
-// Existing image modal functionality
-function openModal(imageSrc) {
-    var modal = document.getElementById("myModal");
-    var modalImage = document.getElementById("modalImage");
-    
-    // Ensure no duplicate images are added
-    if (modalImage.src !== imageSrc) {
-        modal.style.display = "block";
-        modalImage.src = imageSrc;
-
-        // Add event listener to close modal when clicking outside the image
-        modal.addEventListener('click', function(event) {
-            if (event.target === modal) {
-                closeModal();
-            }
-        });
-    }
-}
-
-function closeModal() {
-    var modal = document.getElementById("myModal");
-    modal.style.display = "none";
-}
-
-function closeContactModal() {
-    var contactModal = document.getElementById("contactModal");
-    contactModal.style.display = "none";
-}
