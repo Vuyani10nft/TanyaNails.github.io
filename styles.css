@@ -79,9 +79,10 @@ body {
 }
 
 .btn {
-    background-color: #e91e63;
-    color: white;
+    background-color: #880e4f; /* Much darker shade of pink for higher contrast */
+    color: #f8f9fa; /* Off-white text color */
     padding: 10px 20px;
+    font-size: 1.2em;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
