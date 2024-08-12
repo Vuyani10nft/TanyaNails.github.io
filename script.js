@@ -1,24 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Contact Modal Functionality
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Existing contact modal functionality
     const contactModal = document.getElementById("contactModal");
     const contactBtn = document.getElementById("contactBtn");
-    const contactClose = contactModal?.querySelector(".close");
+    const contactClose = contactModal.querySelector(".close");
 
-    contactBtn?.addEventListener('click', () => {
+    contactBtn.onclick = function() {
         contactModal.style.display = "flex";
-    });
+    }
 
-    contactClose?.addEventListener('click', () => {
+    contactClose.onclick = function() {
         contactModal.style.display = "none";
-    });
+    }
 
-    window.addEventListener('click', (event) => {
-        if (event.target === contactModal) {
+    window.onclick = function(event) {
+        if (event.target == contactModal) {
             contactModal.style.display = "none";
         }
-    });
+    }
 
-    // Lazy Load Google Maps
+    // Lazy load Google Maps
     const mapContainer = document.getElementById('map-container');
     let mapLoaded = false;
 
@@ -38,51 +38,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function onScroll() {
-        if (mapContainer) {
-            const rect = mapContainer.getBoundingClientRect();
-            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-                loadMap();
-                window.removeEventListener('scroll', onScroll);
-            }
+        const rect = mapContainer.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+            loadMap();
+            window.removeEventListener('scroll', onScroll);
         }
     }
 
     window.addEventListener('scroll', onScroll);
     onScroll(); // Check on load in case already in view
-
-    // Image Modal Functionality
-    function openModal(imageSrc) {
-        const modal = document.getElementById("myModal");
-        const modalImage = document.getElementById("modalImage");
-
-        if (modal && modalImage) {
-            // Ensure no duplicate images are added
-            if (modalImage.src !== imageSrc) {
-                modal.style.display = "block";
-                modalImage.src = imageSrc;
-            }
-
-            // Add event listener to close modal when clicking outside the image
-            modal.addEventListener('click', (event) => {
-                if (event.target === modal) {
-                    closeModal();
-                }
-            }, { once: true }); // Ensure the listener is added once
-        }
-    }
-
-    function closeModal() {
-        const modal = document.getElementById("myModal");
-        if (modal) {
-            modal.style.display = "none";
-        }
-    }
-
-    // Global function for closing contact modal
-    window.closeContactModal = () => {
-        const contactModal = document.getElementById("contactModal");
-        if (contactModal) {
-            contactModal.style.display = "none";
-        }
-    }
 });
+
+// Existing image modal functionality
+function openModal(imageSrc) {
+    var modal = document.getElementById("myModal");
+    var modalImage = document.getElementById("modalImage");
+    
+    // Ensure no duplicate images are added
+    if (modalImage.src !== imageSrc) {
+        modal.style.display = "block";
+        modalImage.src = imageSrc;
+
+        // Add event listener to close modal when clicking outside the image
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    }
+}
+
+function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
+
+function closeContactModal() {
+    var contactModal = document.getElementById("contactModal");
+    contactModal.style.display = "none";
+}
