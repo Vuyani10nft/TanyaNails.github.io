@@ -241,12 +241,12 @@ body {
     color: #333;
     margin: 0 15px;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 4em;
     transition: color 0.3s ease;
 }
 
 .social-media-large a:hover {
-    color: blue;
+    color: #f68c8b;
 }
 
 /* Footer Section */
