@@ -446,9 +446,30 @@ body {
         width: 80%;
     }
 
-    #contactModal .modal-content {
-        width: 90%; /* Adjust for smaller screens */
+      #contactModal .modal-content {
+        width: 71%; /* Adjust for smaller screens */
+        height: 50%;
         max-width: 100%; /* Full width on small screens */
-        padding: 20px; /* Less padding for small screens */
+        padding: 45px; /* Less padding for small screens */
     }
+    #contactModal .close {
+    position: absolute;
+    top: 40px; /* Adjust top for visibility */
+    right: 20px; /* Adjust right for visibility */
+    font-size: 67px; /* Set a smaller font size for mobile */
+    cursor: pointer; /* Make sure it's clickable */
+}
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+  
+}
 }
