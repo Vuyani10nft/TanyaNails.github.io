@@ -89,6 +89,11 @@ body {
     display: inline-block;
     cursor: pointer;
 }
+.btn-green {
+    background-color: green; /* Change to the shade of green you prefer */
+    color: white; /* Text color for contrast */
+    border: none; /* Removes default border */
+}
 /* Other CSS styles */
 
 /* Centering text for the Manicure Section */
