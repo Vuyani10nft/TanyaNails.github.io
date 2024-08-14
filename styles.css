@@ -351,8 +351,10 @@ body {
 }
 
 #myModal img {
+    height: auto;
+    width: auto;
     max-width: 90vw;
-    max-height: 80vh;
+    max-height: 90vh;
     object-fit: contain;
 }
 
